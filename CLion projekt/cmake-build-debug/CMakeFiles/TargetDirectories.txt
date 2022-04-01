@@ -1,0 +1,3 @@
+/home/ondrej/CLionProjects/tcp_server_multithread/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ondrej/CLionProjects/tcp_server_multithread/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ondrej/CLionProjects/tcp_server_multithread/cmake-build-debug/CMakeFiles/tcp_server_multithread.dir

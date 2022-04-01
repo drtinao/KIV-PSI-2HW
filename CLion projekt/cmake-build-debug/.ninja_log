@@ -1,0 +1,12 @@
+# ninja log v5
+10	656	1648816538337556946	CMakeFiles/tcp_server_multithread.dir/logic_response.c.o	f3f18ee66c417772
+5	838	1648816538517498811	CMakeFiles/tcp_server_multithread.dir/logic_server.c.o	d759adb81cc4aabc
+5	169	1648814625548412071	CMakeFiles/tcp_server_multithread.dir/main.c.o	71a4aae3f0bf78d7
+839	1021	1648816538701439384	tcp_server_multithread	efaab240f0551b33
+0	42	0	clean	a8b6571bb83bc7e5
+0	118	1648817040161634248	CMakeFiles/tcp_server_multithread.dir/main.c.o	71a4aae3f0bf78d7
+1	272	1648817040313661156	CMakeFiles/tcp_server_multithread.dir/logic_server.c.o	d759adb81cc4aabc
+118	296	1648817040341666113	CMakeFiles/tcp_server_multithread.dir/logic_response.c.o	f3f18ee66c417772
+296	504	1648817040549702935	tcp_server_multithread	e137e8afbc88ff88
+0	152	1648817764522110712	CMakeFiles/tcp_server_multithread.dir/logic_server.c.o	d759adb81cc4aabc
+152	201	1648817764570143209	tcp_server_multithread	e137e8afbc88ff88

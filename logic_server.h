@@ -11,6 +11,7 @@
 #define SERVER_THREAD_CREATE_ERROR "Error while creating thread for new client!\n"
 #define SERVER_WAIT_CLIENT "Ready for client connection!\n"
 #define SERVER_ACCEPT_CON "New client connection accepted!\n"
+#define SERVER_CLOSED_CON "Closing thread, client disconnected!\n"
 #define SERVER_MAX_CLIENT_NUM 50
 #define SERVER_MES_BUF_SIZE 1000
 
@@ -41,6 +42,5 @@
 int start_server();
 int try_port_assign(char *second_param);
 void * client_handler_thread(void *arg);
-char * parse_get_commands(char *client_browser_mes);
 
 #endif //TCP_SERVER_MULTITHREAD_LOGIC_SERVER_H

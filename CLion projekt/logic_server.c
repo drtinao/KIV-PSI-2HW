@@ -73,7 +73,6 @@ int start_server(){
 
         if(pthread_create(&thread, NULL, client_handler_thread, (void *)&client_socket) != 0){
             printf(SERVER_THREAD_CREATE_ERROR);
-            free(client_socket);
             continue;
         }else{
             printf(SERVER_THREAD_CREATE_OK);

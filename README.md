@@ -10,7 +10,7 @@ Aplikace je psána v jazyce C a využívá klasické rozhraní BSD socketů. V p
 
 2.a) socket(domain, type, protocol)
 
-Vytvoří pro otevření spojení, handler.
+Vytvoří socket pro otevření spojení, handler.
 
 2.b) int bind(int sockfd, const struct sockaddr \*addr, socklen_t addrlen)
 
@@ -20,7 +20,7 @@ Naváže socket k určité adrese a portu. Aplikace umožňuje zvolit port, na k
 
 Zahájí naslouchání na socketu (sockfd) a čeká na připojení klientů k serveru. Backlog udává maximální počet klientů, kteří se mohou připojit. Pokud je dosaženo maximálního počtu klientů, obdrží další klient kód ECONNREFUSED.
 
-2.d) accept(int sockfd, struct sockaddr \*addr, socklen_t \*addrlen);
+2.d) accept(int sockfd, struct sockaddr \*addr, socklen_t \*addrlen)
 
 Přijme klienta čekajícího na spojení se serverem. Pokud jich je ve frontě více, má přednost klient, který přišel dříve. Sockfd je socket serveru a addr specifikuje adresu klienta.
 
@@ -30,7 +30,7 @@ Program po spuštění zahájí naslouchání na uživatelem specifikovaném por
 
 Obsluha je řešena pomocí funkce void * client_handler_thread(void \*arg), ve které dojde k přečtení zprávy od klienta. Zpráva je přečtena pouze za předpokladu, že má nenulovou délku a zároveň nepřekračuje délku určenou konstantou SERVER_MES_BUF_SIZE.
 
-Po přečtení zprávy je řízení převzato funkcí char * parse_get_commands(char \*client_browser_mes), jež nejprve zjistí, zda zpráva od klienta obsahuje požadavek typu GET. Pokud je GET přítomen, zkontroluje metoda, zda požadavky v rámci GET odpovídají požadovanému formátu. Pokud ano, je sestavena webová stránka odpovídající požadavkům uživatele. Pokud uživatelská zpráva neodpovídá očekávanému formátu, vrátí se uživateli stránka error page.
+Po přečtení zprávy je nejprve zjištěno, zda zpráva od klienta obsahuje požadavek typu GET. Pokud je GET přítomen, zkontroluje funkce, zda požadavky v rámci GET odpovídají požadovanému formátu. Pokud ano, je sestavena webová stránka odpovídající požadavkům uživatele. Pokud uživatelská zpráva neodpovídá očekávanému formátu, vrátí se uživateli stránka error page.
 
 4) Konstanty umožňující změnu chování programu
 
